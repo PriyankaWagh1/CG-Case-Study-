@@ -1,0 +1,11 @@
+.conatiner-fluid{
+    text-align: center;
+}
+.btn{
+    display: inline-block;
+    width:20rem;
+    height: 3rem;
+    padding:0.5rem 3rem;
+    text-align: center;
+    text-decoration: none;
+}

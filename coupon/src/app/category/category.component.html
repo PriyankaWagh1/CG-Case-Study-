@@ -1,0 +1,70 @@
+<div class="container-fluid">
+    <div class="page-heading">
+        <h1 >All Categories</h1>
+        <p>Avail amazing discounts by choosing from this page full of handpicked and carefully curated offers.</p>
+    </div>
+    <div class="cat-heading mt-3">
+        <h2 class="text-center">Categories</h2>
+    </div>
+    <div class="row">
+        <div class="col-lg-1 col-sm-4 mx-3" *ngFor="let value of values">
+            <div class="v-card" >
+                <a class="v-name " >
+                    <span >{{value}}</span>
+                </a>
+            </div>
+        </div>
+    </div>
+    <br>
+    
+            <ul class="nav nav-tabs nav-justified">
+                <li class="active"><a data-toggle="tab" href="#offers">Offers</a></li>
+                <li><a data-toggle="tab" href="#coupons">Coupons</a></li>
+            </ul>
+            <div class="tab-content">
+                <div id="offers" class="tab-pane fade in active">
+                    <div class="row">
+                        <div class="o-card m-3 col-lg-4" *ngFor="let offer of offers">
+                            <div class="card-body">
+                                <strong>{{offer.stores}} | {{offer.tag}}</strong> <br>{{offer.desc}}
+                                <div class="o-code mt-5 ">{{offer.status}}</div>
+                                <div class="o-cover" (click)="showOffer(offer._id)" data-toggle="modal" data-target="#popup">Show Offer</div>
+                            </div>
+                            <div class="card-footer">
+                                Valid till : {{offer.date}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        
+                <div id="coupons" class="tab-pane fade in active ">
+                    <div class="row">
+                        <div class="c-card m-3 col-lg-4" *ngFor="let coupon of couponDetails">
+                            <div class="card-body">
+                                <strong>{{coupon.stores}} | {{coupon.couponTag}}</strong> <br>{{coupon.couponDes}}
+                                <div class="c-code mt-3 ">{{coupon.couponCode}}</div>
+                                <div class="cover" (click)="showCode(coupon._id)" data-toggle="modal" data-target="#popup">Show Code</div>
+                            </div>
+                            <div class="card-footer">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>    
+</div>
+<div id="popup" class="modal fade">
+    <div class="modal-dialog modal-login">
+      <div class="modal-content">
+        <div class="modal-header">				
+          <h4 class="modal-title">You need to login to access coupon/offer !</h4>
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        </div>
+        <div class="modal-body">
+          <button type="button" class="btn btn-success mr-2" data-dismiss="modal" routerLink="/login" >Yes</button>
+          <button type="button" class="btn btn-danger" data-dismiss="modal">No</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+ 

@@ -1,0 +1,32 @@
+.footer{
+background-color: #222629;
+color:white;
+height: auto;
+width: 100%;
+} 
+h4{
+    font-weight: bold;
+}
+ul {list-style-type: none;}
+
+li a{
+color: white;
+}
+
+li a:hover{
+text-decoration:underline;
+color:#4180CB;
+}
+
+.fa{font-size: 30px;}
+
+a{color:white;}
+
+.contact i{
+    font-size: 16px;
+}
+
+.copyright p{
+    border-top:1px solid rgba(228, 220, 220, 0.493);
+    text-align: center;
+} 

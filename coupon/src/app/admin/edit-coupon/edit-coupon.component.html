@@ -1,0 +1,59 @@
+<div class="container">
+    <h1 class="text-center">Update Coupon</h1>
+    <form class="form" [formGroup]="newCouponForm" (ngSubmit)="updateCoupon(newCouponForm)">
+        <div class="row px-3">
+    
+            <div class="col-lg-4">
+                <div class="form-group">
+                    <label>Coupon Code</label>
+                    <input class="form-control" formControlName="couponCode" name="code" minlength="{3}"
+                        placeholder=" Add Coupon Code" required />
+    
+                </div>
+            </div>
+    
+            <div class="col-lg-4">
+                <div class="form-group">
+                    <label>Coupon Tag</label>
+                    <input class="form-control" formControlName="couponTag" minlength="3" name="tag"
+                        placeholder="Enter Coupon Tag" required />
+    
+                </div>
+            </div>
+    
+            <div class="col-lg-8">
+                <div class="form-group">
+                    <label>Coupon Description</label>
+                    <input class="form-control" formControlName="couponDes" placeholder="Description" required>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="form-group">
+                    <label>Category</label>
+                    <input class="form-control" formControlName="category" placeholder="Category" required />
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="form-group">
+                    <label>Brand</label>
+                    <input class="form-control" placeholder="Enter brand name" formControlName="brand" required>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="form-group">
+                    <label>Stores</label>
+                    <input type="text" class="form-control" placeholder="Enter stores" formControlName="stores" required />
+                </div>
+            </div>
+        </div>
+    
+        <div class="row">
+            <div class="col d-flex justify-content-center">
+                <button class="btn btn-primary" type="submit">
+                    Update Coupon
+                </button>
+    
+            </div>
+        </div>
+    </form>
+</div>

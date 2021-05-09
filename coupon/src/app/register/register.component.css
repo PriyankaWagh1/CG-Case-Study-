@@ -1,0 +1,75 @@
+
+.btn{
+    margin:0.5rem 1.5rem;
+    width: 230px;
+    border-radius: 0;
+}
+
+
+.register-photo {
+    background: #f1f7fc;
+    padding: 80px 0
+}
+
+.register-photo .image-holder {
+    display: table-cell;
+    width: auto;
+    background: url(https://i.imgur.com/Fqm9rWL.jpg);
+    background-size: cover
+}
+
+.register-photo .form-container {
+    display: table;
+    max-width: 900px;
+    width: 90%;
+    margin: 0 auto;
+    box-shadow: 0px 4px 5px 0px rgba(0, 0, 0, 0.5)
+}
+
+.register-photo form {
+    display: table-cell;
+    width: 400px;
+    background-color: #ffffff;
+    padding: 40px 60px;
+    color: #505e6c
+}
+
+.register-photo form h2 {
+    font-size: 24px;
+    line-height: 1.5;
+    margin-bottom: 30px
+}
+
+.register-photo form .form-control {
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #dfe7f1;
+    border-radius: 0;
+    box-shadow: none;
+    outline: none;
+    color: inherit;
+    text-indent: 0px;
+    height: 40px
+}
+.register-photo form .form-control:focus{
+    border-bottom:1px solid green ;
+}
+
+.register-photo form .form-check {
+    font-size: 13px;
+    line-height: 20px
+}
+.alert{
+    text-align: center;
+}
+
+.register-photo form .btn-success {
+    background: #86c232;
+    border: 1px solid #86c232;
+}
+
+@media (max-width:991px) {
+    .register-photo form {
+        padding: 40px;
+    }
+}

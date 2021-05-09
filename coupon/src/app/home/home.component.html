@@ -1,0 +1,116 @@
+<section class="section-a">
+  <div class="row">
+    <ngb-carousel class="col-lg-9 col-sm-8">
+      <ng-template ngbSlide>
+        <div class="picsum-img-wrapper">
+          <img src="../../assets/images/slider5.jpeg" alt="Slider1">
+        </div>
+      </ng-template>
+      <ng-template ngbSlide>
+        <div class="picsum-img-wrapper">
+          <img src="../../assets/images/slider2.jpg" alt="Slider2">
+        </div>
+
+      </ng-template>
+      <ng-template ngbSlide>
+        <div class="picsum-img-wrapper">
+          <img src="../../assets/images/slider6.jpeg" alt="Slider3">
+        </div>
+      </ng-template>
+      <ng-template ngbSlide>
+        <div class="picsum-img-wrapper">
+          <img src="../../assets/images/slider4.jpeg" alt="Slider3">
+        </div>
+      </ng-template>
+    </ngb-carousel>
+    <div class="col-lg-2 col-sm-4 list-group mt-lg-4 p-3 mt-sm-2">
+      <a href="#brands" class="list-group-item list-group-item-action">Popular Brands </a>
+      <a href="#stores" class="list-group-item list-group-item-action">Popular Stores</a>
+      <a href="#deals" class="list-group-item list-group-item-action">Deals of the Day</a>
+      <a href="#subscribe" class="list-group-item list-group-item-action">Subscribe</a>
+      <a href="#collection" class="list-group-item list-group-item-action">Collections<span class="badge badge-success ml-2">New</span></a>
+    </div>
+  </div>
+</section>
+<br /><hr>
+<section class="section-b" id="brands">
+  <div class="container">
+    <div class="brand-heading">
+      <h1>Popular Brands</h1>
+    </div>
+    <div class="row pl-5">
+      <div class="card col-lg-2 col-sm-3" *ngFor="let brand of brandDetails">
+        <img class="card-img-top" src="{{brand.brandImage}}" alt="Card image cap">
+        <div class="card-body">
+          <p class="card-text">{{brand.brandName}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<hr>
+<section class="section-c" id="stores">
+  <div class="container">
+    <div class="brand-heading">
+      <h1>Popular Stores</h1>
+    </div>
+      <div class="row">
+        <div class="s-card col-lg-1 col-sm-3" *ngFor="let store of stores">
+          <img class="card-img" src="{{store.storeImage}}" alt="Card image cap">
+        </div> 
+      </div>    
+    </div>
+</section>
+<hr>
+<section class="section-email" id="subscribe">
+  <div class=" e-container">
+        <div class="row">
+          <div class="email-image col-md-6 col-sm-1"> 
+            <img src="../../assets/images/email.png" alt="Email Subscribe Image">
+          </div>
+          <div class="form-group col-md-6 col-sm-9">
+            <h1 class="mt-3">Subscribe </h1>
+            <p>Get the Latest Coupons/Offer Alerts </p>
+            <input class="mr-2 mt-3 mb-2" type="email" name="email" id="email" placeholder="Enter email">
+            <button type="submit mt-2" class="btn btn-default">Subscribe</button>
+          </div>
+        </div>
+    </div>
+</section>
+<hr>
+<section class="section-e" id="deals">
+  <div class="container">
+    <div class="brand-heading">
+      <h1>Deals of the Day</h1>
+    </div>
+    <div class="row">
+      <div class="col-lg-1"></div>
+      <div class="d-card col-lg-3 col-sm-3" *ngFor="let deal of deals">
+        <img class="d-card-img-top" src="{{deal.dealImage}}" alt="Card image cap">
+        <div class="d-card-body">
+          <p>{{deal.store}}</p>
+          <p  class="price">Rs.{{deal.price}}</p>
+          <p class="card-des">{{deal.dealDes}}</p>
+          <a href="https://www.grabon.in/">Buy Now</a>
+        </div>
+      </div>
+    </div>
+    </div>
+</section>
+<hr>
+
+<section class="section-g" id="collection">
+  <div class="container">
+    <div class="brand-heading">
+      <h1>Our Collection</h1>
+    </div>
+    <div class="row pl-5">
+      <div class="c-card col-lg-3 col-sm-3" *ngFor="let col of collection">
+        <img class="c-card-img-top" src="{{col.colImage}}" alt="Card image cap">
+        <div class="c-card-body">
+          <p>{{col.colName}}</p>
+        </div>
+      </div>
+    </div>
+    </div>
+</section>

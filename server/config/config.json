@@ -1,0 +1,8 @@
+{
+    "development": {
+        
+        "MONGODB_URI": "mongodb+srv://Test:test@cluster0.2mjgr.mongodb.net/couponDb?retryWrites=true&w=majority",
+        "JWT_SECRET": "SECRET#123",
+        "JWT_EXP": "1m"
+    }
+}

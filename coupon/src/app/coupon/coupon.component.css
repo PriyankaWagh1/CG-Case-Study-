@@ -1,0 +1,43 @@
+.container-fluid{
+    background-image: linear-gradient(darkgreen,green,limegreen);
+    padding:2rem;
+}
+a{
+    color:white;
+    padding: 20.5rem;
+    font-size: 1.3rem;
+    
+}
+.card{
+    background: whitesmoke;
+    margin: 1rem 0rem;
+    padding: 2rem;
+    border-radius: 4px;
+}
+.code{
+    text-align: center;
+    border-top: 1px solid grey;
+    padding: 0.5rem ;
+    line-height: 1.5rem;
+}
+.extra{
+    font-weight: bold;
+    margin-bottom: 3rem;
+}
+.c-code{
+    display:inline-block;
+    border: 1px dashed black;
+    padding: 0.5rem 4rem;
+    font-size: 1.4rem;
+}
+.copycode{
+    background: #6c8c39;
+    padding: 0.6rem 2rem;
+    color: white;
+    font-size: 1rem;
+    border:none;
+    margin-top:-7px;
+}
+.payment{
+    margin: 1rem 38rem;
+}

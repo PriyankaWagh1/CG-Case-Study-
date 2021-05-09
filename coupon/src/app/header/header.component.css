@@ -1,0 +1,20 @@
+input[type='search']{
+    width: 280px;
+}
+
+.navbar{
+    background: #222629;
+}
+
+a{
+    color: white;
+}
+a:hover{
+    border:1px solid whitesmoke;
+    
+    border-radius: 5px;
+}
+.btn-success{
+    background: #61892f;
+    border:1px solid #61892f ;
+}

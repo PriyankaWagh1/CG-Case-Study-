@@ -1,0 +1,128 @@
+.container-fluid{
+    background-color: #f3f3f0;
+    padding: 4rem;
+}
+.nav-tabs a{
+    color: black;
+    
+}
+.nav-tabs a:hover{
+    color: blue;
+    text-decoration: none;
+    font-weight: 600;
+    cursor: pointer;
+}
+.nav-tabs li{
+    padding:0.5rem 3rem;
+    border: 1px solid rgb(213, 213, 216);
+    border-bottom: none;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    
+}
+
+.page-heading{
+    background-image: linear-gradient(darkgreen,green,limegreen);
+    padding: 1rem ;
+    color: white;
+    text-align: center;
+}
+.card{
+    margin: 1rem 0.7rem;
+    width: 12rem;
+    height:8rem;
+    list-style: none;
+}
+.card p{
+    padding: 0.4rem;
+    border-top:1px solid gray ;
+}
+.card-img-top{
+    margin: 1rem 0.5rem;
+    margin-right: 1rem;
+    width:4rem;
+    height: 4rem;
+    border-radius: 50%;
+}
+.c-card{
+    width: auto;
+    background-color: white;
+    border : 1px solid rgb(129, 170, 46);
+    border-left: 6px solid yellowgreen;
+}
+.c-code{
+    width: 11rem;
+    height: 2.4rem;
+    text-align:center;
+    font-size: 1.6rem;
+    margin-left:3rem ;
+    border:1px dashed #222629;
+    padding: 0.5rem 1.5rem ;
+}
+.cover{
+    text-align: center;
+    padding: 0.5rem 3rem ;
+    width: 14rem;
+    height: 2.4rem;
+    font-size: 1rem;
+    color: white;
+    border: 1px solid yellowgreen;
+    background: yellowgreen;
+    transform: translateY(-2.4rem);
+    cursor: pointer;
+}
+.cover:hover{
+    animation: 1s slide ease forwards ;
+    
+}
+@keyframes slide {
+    0% {transform: 0;}
+    100% {width: 12rem;}
+}
+.o-card{
+    width: auto;
+    background-color: white;
+    border : 1px solid dodgerblue;
+    border-left: 6px solid dodgerblue;
+}
+.o-code{
+    width: 11rem;
+    height: 2.4rem;
+    text-align:center;
+    font-size: 1.6rem;
+    margin-left:3rem ;
+    border:1px dashed #222629;
+    padding: 0.5rem 1.5rem ;
+}
+.o-cover{
+    text-align: center;
+    padding: 0.5rem 3rem ;
+    width: 14rem;
+    height: 2.4rem;
+    font-size: 1rem;
+    color: white;
+    border: 1px solid dodgerblue;
+    background: dodgerblue;
+    transform: translateY(-2.4rem);
+    cursor: pointer;
+}
+.o-cover:hover{
+    animation: 1s slide ease forwards ;
+    
+}
+.v-card{
+    width: 7rem;
+    margin:auto 1.5rem;
+    padding: 1rem ;
+    text-align: center;
+    background-image: linear-gradient(#0c047a,#3162ce,blue,dodgerblue);
+}
+.v-card a{
+    color: ghostwhite;
+    font-size: 1rem;
+    text-decoration: none;  
+    cursor: pointer; 
+}
+.v-card:hover{
+    transform: translateY(-3px);
+}

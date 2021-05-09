@@ -1,0 +1,162 @@
+.carousel{
+    width:auto;
+    height: 300px;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.carousel img{
+    width:100%;
+    height:300px;
+    border-radius: 5px;
+}
+.section-b, .section-d, .section-g{
+    background-color:#f1f7fc;
+    text-align: center;
+    margin: 1rem 0rem;
+    padding:1rem;
+    
+}
+.section-c, .section-e{
+    text-align: center;
+    
+    margin: 1rem 0rem;
+    padding:1rem;
+}
+.section-email{
+    background-color:#86c232;
+    color:white;
+    text-align: left;
+    margin: 1rem 0rem;
+    padding: 1rem;
+    height:300px;
+    border-radius:30px;
+}
+
+input[type='email']{
+    width:20rem;
+    height: 2.3rem;
+    font-size: 1.1rem;
+    border: transparent;
+    padding: 0.8rem;
+    border-radius: 5px;
+}
+.btn-default{
+    background: #727679;
+    color: white;
+    height: 2.3rem;
+}
+.email-image img{
+    display: inline-block;
+    width: 30rem;
+    height: 16rem;
+}
+.brand-heading h1{
+    display: inline-block;
+    padding: 0.7rem 5rem;    
+    font:2.2rem;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    border: 1px solid grey;
+    border-radius: 2rem;
+    
+}
+.card{
+    margin: 1rem 0.7rem;
+     width: 12rem;
+    height:8rem;
+    border: none;
+    border-radius: 10px;
+   
+}
+
+.card:hover{
+    box-shadow:2px 2px 2px 2px rgba(0,0,2,0.3);
+    transform: translateY(-5px);
+    cursor:pointer;
+}
+.card-img-top{
+    width:100%;
+    height: 5rem;
+    
+}
+.card-body{
+    border-top: 1px solid rgb(196, 191, 191);
+    padding: 0.5rem;
+}
+.list-group{
+    background-image: linear-gradient(blue,dodgerblue,lightblue);
+}
+.list-group-item{
+    padding: 1rem;
+    font-size: 1rem;
+}
+.list-group-item:hover{
+    font-weight: bold;
+}
+.s-card{
+    margin: 1rem 0.7rem;
+    width: 12rem;
+    height:auto;
+    border: 1px solid grey;
+    border-radius: 10px;
+    box-shadow: 1px 2px 2px 1px rgba(0,0,2,0.3);
+   
+}
+.card-img{
+    width:100%;
+    height: 4rem; 
+}
+.d-card{
+    
+    border: 1px solid limegreen;
+    margin: 0.5rem 1rem;
+  
+}
+.d-card-body a{
+    color:white;
+    position: absolute;
+    right:1rem;
+    bottom: 1rem;
+}
+.d-card-body a:hover{
+    text-decoration: none;
+    color:dodgerblue;
+    font-weight: bold;
+}
+.d-card-img-top{
+    width:100%;
+    height:15rem;
+}
+.d-card-body{
+    text-align: left;
+    color: grey;
+    padding: 0.2rem;
+    margin-right: 3rem;
+}
+.price{
+    color: black;
+    font-weight: bold;
+}
+.card-des{
+    color: black;
+}
+.c-card{
+    height: 15rem;
+    
+}
+.c-card-img-top:hover{
+   transform:rotateY(25deg)
+}
+.c-card-img-top{
+    width: 100%;
+    height:100%;
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px 2px rgba(0,0,2,0.3);
+}
+.c-card-body{
+    position: absolute;
+    font-size:  1.3rem;
+    font-weight: bold;
+    top: 1rem;
+    left: 4rem;
+}

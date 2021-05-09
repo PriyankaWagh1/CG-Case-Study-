@@ -1,0 +1,63 @@
+<nav class="navbar navbar-expand-lg pl-5 pr-3 sticky-top navbar-dark">
+  <a class="navbar-brand ml-lg-5 mr-2 " href="">
+    <img src="./assets/images/deals_logo.jpeg" width="40" height="40" alt="Brand logo image">
+    GrabDeals
+  </a>
+  <div class="mx-lg-5m mx-sm-0 "></div>
+  <div class="mx-lg-5 mx-sm-0 "></div>
+
+  <button class="navbar-toggler mr-3" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="collapsibleNavbar">
+
+    <ul class="navbar-nav ml-auto mr-4">
+      <form class="navbar-form ml-2 mr-4 ">
+        <div class="form-inline">
+          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-success my-2 my" type="submit">Search</button>
+        </div>
+
+      </form>
+      <li class="nav-item m-2">
+        <a class="nav-link" href="admin">Admin</a>
+      </li>
+      <li class="nav-item m-2">
+        <a class="nav-link" href="">Home</a>
+      </li>
+      <li class="nav-item m-2">
+        <a class="nav-link" href="categories">Categories</a>
+      </li>
+      <li class="nav-item m-2">
+        <a class="nav-link" href="news">News</a>
+      </li>
+      <li class="nav-item m-2">
+        <a class="nav-link" href="about">About Us</a>
+      </li>
+      <li class="nav-item m-2" *ngIf="!loginService.checkTokenExist()" >
+        <a href="/login" role="button" class="btn btn-success" > Login/Signup</a>
+       </li>
+       <li class="nav-item m-2" *ngIf="loginService.checkTokenExist()">
+        <a href="/home" role="button" class="btn btn-success" data-toggle="modal" data-target="#myModalLogout"> Logout</a>
+      </li>
+    
+    </ul>
+    
+  </div>
+</nav>
+
+
+<div id="myModalLogout" class="modal fade">
+  <div class="modal-dialog modal-login">
+    <div class="modal-content">
+      <div class="modal-header">				
+        <h4 class="modal-title">Are You Sure You Want to Logout?</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+      </div>
+      <div class="modal-body">
+        <button type="button" class="btn btn-success mr-2" data-dismiss="modal" (click)='loginService.logout()' >Yes</button>
+        <button type="button" class="btn btn-danger" data-dismiss="modal">No</button>
+      </div>
+    </div>
+  </div>
+</div>
