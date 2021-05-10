@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
-const role = require('./role.model');
+
 
 var userSchema = new mongoose.Schema({
     firstname: {
@@ -21,13 +21,8 @@ var userSchema = new mongoose.Schema({
         type: String,
         required: `Password can't be empty`,
         minlength: [5, 'Password must be atleast 5 character long']
-    },
-    roles:[
-        {
-            type: mongoose.Schema.Types.ObjectId,
-            ref:'role'
-        }
-    ]
+    }
+    
 });
 
 // Custom validation for 

@@ -3,7 +3,7 @@ const router = express.Router();
 
 const ctrlUser = require('../controllers/user.controller');
 const ctrlBrand = require('../controllers/brand.controller');
-//const jwtToken = require('../config/jwtToken');
+const jwtToken = require('../config/jwtToken');
 const ctrlCoupon = require('../controllers/coupon.controller');
 const ctrlOffer = require('../controllers/offer.controller');
 const ctrlDeal = require('../controllers/ddeals.controller');

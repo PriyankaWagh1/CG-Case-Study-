@@ -42,7 +42,7 @@ export class RegisterComponent implements OnInit {
         this.loginService.registerUser(this.registerForm.value).subscribe(
           data=>{
             this.showSucessMessage = true;
-            setTimeout(() => this.showSucessMessage = false, 4000);
+            setTimeout(() => this.showSucessMessage = false, 1000);
             this.resetForm(this.registerForm);
             this.router.navigate(['/login']);
           },

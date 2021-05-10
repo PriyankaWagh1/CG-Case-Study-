@@ -1,37 +1,39 @@
-<section class="section-a">
-  <div class="row">
-    <ngb-carousel class="col-lg-9 col-sm-8">
-      <ng-template ngbSlide>
-        <div class="picsum-img-wrapper">
-          <img src="../../assets/images/slider5.jpeg" alt="Slider1">
-        </div>
-      </ng-template>
-      <ng-template ngbSlide>
-        <div class="picsum-img-wrapper">
-          <img src="../../assets/images/slider2.jpg" alt="Slider2">
-        </div>
-
-      </ng-template>
-      <ng-template ngbSlide>
-        <div class="picsum-img-wrapper">
-          <img src="../../assets/images/slider6.jpeg" alt="Slider3">
-        </div>
-      </ng-template>
-      <ng-template ngbSlide>
-        <div class="picsum-img-wrapper">
-          <img src="../../assets/images/slider4.jpeg" alt="Slider3">
-        </div>
-      </ng-template>
-    </ngb-carousel>
-    <div class="col-lg-2 col-sm-4 list-group mt-lg-4 p-3 mt-sm-2">
-      <a href="#brands" class="list-group-item list-group-item-action">Popular Brands </a>
-      <a href="#stores" class="list-group-item list-group-item-action">Popular Stores</a>
-      <a href="#deals" class="list-group-item list-group-item-action">Deals of the Day</a>
-      <a href="#subscribe" class="list-group-item list-group-item-action">Subscribe</a>
-      <a href="#collection" class="list-group-item list-group-item-action">Collections<span class="badge badge-success ml-2">New</span></a>
+<div class="container">
+  <section class="section-a">
+    <div class="row">
+      <ngb-carousel class="col-lg-9 col-sm-7">
+        <ng-template ngbSlide>
+          <div class="picsum-img-wrapper">
+            <img src="../../assets/images/slider5.jpeg" alt="Slider1">
+          </div>
+        </ng-template>
+        <ng-template ngbSlide>
+          <div class="picsum-img-wrapper">
+            <img src="../../assets/images/slider2.jpg" alt="Slider2">
+          </div>
+  
+        </ng-template>
+        <ng-template ngbSlide>
+          <div class="picsum-img-wrapper">
+            <img src="../../assets/images/slider6.jpeg" alt="Slider3">
+          </div>
+        </ng-template>
+        <ng-template ngbSlide>
+          <div class="picsum-img-wrapper">
+            <img src="../../assets/images/slider4.jpeg" alt="Slider3">
+          </div>
+        </ng-template>
+      </ngb-carousel>
+      <div class="col-lg-3 col-sm-5 list-group mt-lg-4 p-3 mt-sm-4">
+        <a href="#brands" class="list-group-item list-group-item-action">Popular Brands </a>
+        <a href="#stores" class="list-group-item list-group-item-action">Popular Stores</a>
+        <a href="#deals" class="list-group-item list-group-item-action">Deals of the Day</a>
+        <a href="#subscribe" class="list-group-item list-group-item-action">Subscribe</a>
+        <a href="#collection" class="list-group-item list-group-item-action">Collections<span class="badge badge-success ml-2">New</span></a>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
+</div>
 <br /><hr>
 <section class="section-b" id="brands">
   <div class="container">
@@ -105,7 +107,7 @@
       <h1>Our Collection</h1>
     </div>
     <div class="row pl-5">
-      <div class="c-card col-lg-3 col-sm-3" *ngFor="let col of collection">
+      <div class="c-card col-lg-3 col-sm-6 mt-sm-3" *ngFor="let col of collection">
         <img class="c-card-img-top" src="{{col.colImage}}" alt="Card image cap">
         <div class="c-card-body">
           <p>{{col.colName}}</p>

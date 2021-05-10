@@ -49,6 +49,7 @@
     background-color: white;
     border : 1px solid rgb(129, 170, 46);
     border-left: 6px solid yellowgreen;
+    border-radius: 1%;
 }
 .c-code{
     width: 11rem;
@@ -84,6 +85,7 @@
     background-color: white;
     border : 1px solid dodgerblue;
     border-left: 6px solid dodgerblue;
+    border-radius: 1%;
 }
 .o-code{
     width: 11rem;
@@ -111,18 +113,20 @@
     
 }
 .v-card{
-    width: 7rem;
-    margin:auto 1.5rem;
     padding: 1rem ;
     text-align: center;
-    background-image: linear-gradient(#0c047a,#3162ce,blue,dodgerblue);
+    
 }
 .v-card a{
     color: ghostwhite;
     font-size: 1rem;
     text-decoration: none;  
     cursor: pointer; 
+    padding: 12px 35px;
+    width: 9rem;
 }
-.v-card:hover{
+.v-card a:hover{
     transform: translateY(-3px);
+    background-color: dodgerblue;
+    border: 4px double white;
 }

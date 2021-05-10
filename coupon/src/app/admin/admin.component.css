@@ -1,5 +1,23 @@
 .conatiner-fluid{
     text-align: center;
+    
+}
+.a-image{
+    background: linear-gradient(-45deg, #e3f5d9, #f8fdb6, #ecf7b2);
+    background-size: 500% 500%;
+    padding-bottom: 10rem;
+    animation: gradient 15s ease infinite;
+}
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
 }
 .btn{
     display: inline-block;

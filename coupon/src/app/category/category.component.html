@@ -7,9 +7,9 @@
         <h2 class="text-center">Categories</h2>
     </div>
     <div class="row">
-        <div class="col-lg-1 col-sm-4 mx-3 mt-sm-2" *ngFor="let value of values">
+        <div class="col-lg-1 col-sm-2 mx-5 mt-sm-2" *ngFor="let value of values">
             <div class="v-card" >
-                <a class="v-name " >
+                <a class="v-name btn btn-warning" role="button"  >
                     <span >{{value}}</span>
                 </a>
             </div>
@@ -24,7 +24,7 @@
             <div class="tab-content">
                 <div id="offers" class="tab-pane fade in active">
                     <div class="row">
-                        <div class="o-card m-3 col-lg-4" *ngFor="let offer of offers">
+                        <div class="o-card m-3 col-lg-5 col-sm-11" *ngFor="let offer of offers">
                             <div class="card-body">
                                 <strong>{{offer.stores}} | {{offer.tag}}</strong> <br>{{offer.desc}}
                                 <div class="o-code mt-5 ">{{offer.status}}</div>
@@ -39,7 +39,7 @@
         
                 <div id="coupons" class="tab-pane fade in active ">
                     <div class="row">
-                        <div class="c-card m-3 col-lg-4" *ngFor="let coupon of couponDetails">
+                        <div class="c-card m-3 col-lg-5 col-sm-11" *ngFor="let coupon of couponDetails">
                             <div class="card-body">
                                 <strong>{{coupon.stores}} | {{coupon.couponTag}}</strong> <br>{{coupon.couponDes}}
                                 <div class="c-code mt-3 ">{{coupon.couponCode}}</div>

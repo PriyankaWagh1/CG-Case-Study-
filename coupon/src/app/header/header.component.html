@@ -32,8 +32,8 @@
       <li class="nav-item m-2">
         <a class="nav-link" href="about">About Us</a>
       </li>
-      <li class="nav-item m-2">
-        <a class="nav-link" href="admin" >Admin</a>
+      <li class="nav-item m-2" *ngIf="loginService.isAdmin()">
+        <a class="nav-link" href="admin" aria-disabled="true">Admin</a>
       </li>
       <li class="nav-item m-2" *ngIf="!loginService.checkTokenExist()" >
         <a href="/login" role="button" class="btn btn-success" > Login/Signup</a>

@@ -32,6 +32,33 @@ app.use((err, req, res, next) => {
         console.log(err);
     }
 });
+function initial() {
+    Role.estimatedDocumentCount((err, count) => {
+      if (!err && count === 0) {
+        new Role({
+          name: "user"
+        }).save(err => {
+          if (err) {
+            console.log("error", err);
+          }
+  
+          console.log("added 'user' to roles collection");
+        });
+  
+        
+  
+        new Role({
+          name: "admin"
+        }).save(err => {
+          if (err) {
+            console.log("error", err);
+          }
+  
+          console.log("added 'admin' to roles collection");
+        });
+      }
+    });
+  }
 
 // start server
 app.listen(port, () => console.log(`Server started at port : ${port}`));

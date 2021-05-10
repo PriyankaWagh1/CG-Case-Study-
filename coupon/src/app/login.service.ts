@@ -59,13 +59,7 @@ export class LoginService {
       return false;
   }
   isAdmin(){
-    const userStr = localStorage.getItem('currentUser');
-    if(userStr){
-      const user = JSON.parse(userStr);
-      return user.isAdmin;
-    }
-    else
-      return false;
+    
   }
 
   logout(){  
