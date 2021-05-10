@@ -11,6 +11,7 @@ const ctrlUpcoming = require('../controllers/upcoming.controller');
 const ctrlStore = require('../controllers/stores.controller');
 const ctrlCol = require('../controllers/collections.controller');
 
+
 router.post('/register', ctrlUser.register);
 router.post('/authenticate', ctrlUser.authenticate);
 

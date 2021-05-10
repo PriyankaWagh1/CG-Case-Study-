@@ -1,6 +1,6 @@
 .container {
     padding: 50px 50px; 
-      
+    background-color: #f3f3f0;
 }
 .d-flex{
     display:inline-flex;
@@ -20,4 +20,10 @@ p{
 }
 a{
     padding-bottom:5px;
+}
+.page-heading{
+    background-image: linear-gradient(darkgreen,green,limegreen);
+    padding: 0.5rem ;
+    color: white;
+    text-align: center;
 }

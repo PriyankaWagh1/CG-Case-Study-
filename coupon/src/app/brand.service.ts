@@ -55,4 +55,7 @@ export class BrandService {
   deleteOffer(id:any){
     return this.http.delete(this.apiBaseUrl+'/deleteOffer/'+id);
   }
+  getUpcoming(){
+    return this.http.get(this.apiBaseUrl + '/getupoffer');
+  }
 }

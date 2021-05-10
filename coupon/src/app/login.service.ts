@@ -58,6 +58,15 @@ export class LoginService {
     else
       return false;
   }
+  isAdmin(){
+    const userStr = localStorage.getItem('currentUser');
+    if(userStr){
+      const user = JSON.parse(userStr);
+      return user.isAdmin;
+    }
+    else
+      return false;
+  }
 
   logout(){  
     localStorage.removeItem('token');

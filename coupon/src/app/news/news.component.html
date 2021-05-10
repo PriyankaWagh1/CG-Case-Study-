@@ -1,1 +1,21 @@
-<p>news works!</p>
+<div class="container">
+    <div class="page-heading">
+        <h1 >News and Trending Topics</h1>
+        
+    </div>
+    <div class="row  m-4" *ngFor="let news of newsDetails">
+        <div class="col-md-4 col-sm-10" >
+            <img class="card-img" src="{{news.upImage}}" alt="Card Image">
+        </div>
+        <div class="col-md-7 col-sm-10">
+            <div class="card-body">
+                <h5 class="card-title">{{news.upName}}</h5>
+                <span class="category">{{news.category}}</span>
+                <p class="card-text">{{news.desc}}</p>
+                
+            </div>
+        </div>
+        <hr>
+    </div>
+    
+</div>

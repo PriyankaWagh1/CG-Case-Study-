@@ -3,9 +3,11 @@ const mongoose = require('mongoose');
 const Upcoming = mongoose.model('Upcoming');
 
 module.exports.addupoffer = (req, res, next) => {
-    var upcoming = new upcoming();
+    var upcoming = new Upcoming();
     upcoming.upImage = req.body.upImage,
-    upcoming.upName = req.body.upName
+    upcoming.upName = req.body.upName,
+    upcoming.category = req.body.category,
+    upcoming.desc= req.body.desc,
     upcoming.save((err, doc) => {
         if (!err)
             res.send(doc);

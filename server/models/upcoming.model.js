@@ -8,6 +8,12 @@ var upOfferSchema = new mongoose.Schema({
     upName : {
         type: String,
         
+    },
+    category:{
+        type:String
+    },
+    desc:{
+        type:String
     }
     
     

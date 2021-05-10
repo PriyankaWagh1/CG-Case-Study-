@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { BrandService } from '../brand.service';
 
 @Component({
   selector: 'app-news',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NewsComponent implements OnInit {
 
-  constructor() { }
+  newsDetails: any;
+  constructor(private brandService: BrandService) { }
 
   ngOnInit(): void {
+    this.brandService.getUpcoming().subscribe(data=>{
+      this.newsDetails = data;
+    })
   }
 
 }
