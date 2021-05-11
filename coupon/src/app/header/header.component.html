@@ -11,15 +11,7 @@
   </button>
   <div class="collapse navbar-collapse" id="collapsibleNavbar">
 
-    <ul class="navbar-nav ml-auto mr-4">
-      <form class="navbar-form ml-2 mr-4 ">
-        <div class="form-inline">
-          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-success my-2 my" type="submit">Search</button>
-        </div>
-
-      </form>
-      
+    <ul class="navbar-nav ml-auto mr-4">    
       <li class="nav-item m-2">
         <a class="nav-link" href="">Home</a>
       </li>
@@ -32,9 +24,7 @@
       <li class="nav-item m-2">
         <a class="nav-link" href="about">About Us</a>
       </li>
-      <li class="nav-item m-2" *ngIf="loginService.isAdmin()">
-        <a class="nav-link" href="admin" aria-disabled="true">Admin</a>
-      </li>
+     
       <li class="nav-item m-2" *ngIf="!loginService.checkTokenExist()" >
         <a href="/login" role="button" class="btn btn-success" > Login/Signup</a>
        </li>

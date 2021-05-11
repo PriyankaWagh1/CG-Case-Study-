@@ -1,4 +1,9 @@
+import { HttpClientModule } from '@angular/common/http';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { RouterTestingModule } from '@angular/router/testing';
+import { BrandService } from '../brand.service';
+import { LoginService } from '../login.service';
 
 import { OfferComponent } from './offer.component';
 
@@ -8,7 +13,9 @@ describe('OfferComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ OfferComponent ]
+      imports:[HttpClientModule,HttpClientTestingModule,RouterTestingModule],
+      declarations: [ OfferComponent ],
+      providers:[LoginService, BrandService]
     })
     .compileComponents();
   });

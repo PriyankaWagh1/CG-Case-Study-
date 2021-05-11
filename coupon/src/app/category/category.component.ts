@@ -19,6 +19,7 @@ export class CategoryComponent implements OnInit {
   values: any;
   id: any;
   offerDetails:any;
+  public query: any = " ";
   constructor(
     private brandService: BrandService, 
     public loginService: LoginService,

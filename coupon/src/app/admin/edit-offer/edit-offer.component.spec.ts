@@ -1,4 +1,9 @@
+import { HttpClientModule } from '@angular/common/http';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { ReactiveFormsModule } from '@angular/forms';
+import { RouterTestingModule } from '@angular/router/testing';
+import { BrandService } from 'src/app/brand.service';
 
 import { EditOfferComponent } from './edit-offer.component';
 
@@ -8,7 +13,9 @@ describe('EditOfferComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ EditOfferComponent ]
+      imports : [HttpClientTestingModule,HttpClientModule,RouterTestingModule,ReactiveFormsModule],
+      declarations: [ EditOfferComponent ],
+      providers : [BrandService]
     })
     .compileComponents();
   });

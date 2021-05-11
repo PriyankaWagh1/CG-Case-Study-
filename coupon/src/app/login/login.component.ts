@@ -48,7 +48,13 @@ export class LoginComponent implements OnInit {
       
      this.loginService.setToken(data['token']);
      console.log(data);
-     this.router.navigate(['/']);
+     if(this.loginForm.value.username==="admin" && this.loginForm.value.password==="admin"){
+       console.log('Hi');
+       this.router.navigate(['/admin']);
+     }
+     else{
+      this.router.navigate(['/']);
+     }
      
     },
     err=>{

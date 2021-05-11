@@ -17,7 +17,9 @@ export class LoginService {
     password:''
   };
   loginStatus: EventEmitter<boolean> = new EventEmitter<boolean>();
-  constructor(private http: HttpClient, private router: Router){}
+  constructor(private http: HttpClient, private router: Router){
+  
+  }
 
   registerUser(user: User){
     return this.http.post(this.apiBaseUrl+'/register',user);
@@ -51,6 +53,7 @@ export class LoginService {
       return null;
   }
 
+
   isLoggedIn() {
     var userPayload = this.getUserPayload();
     if (userPayload)
@@ -58,9 +61,7 @@ export class LoginService {
     else
       return false;
   }
-  isAdmin(){
-    
-  }
+  
 
   logout(){  
     localStorage.removeItem('token');

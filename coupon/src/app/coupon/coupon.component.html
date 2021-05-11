@@ -4,12 +4,12 @@
         <div class="col-lg-3"></div>
         <div class="card col-lg-6">
             <div class="coupon">
-                <p><strong>{{coupons.couponTag}}</strong></p>
-                <p>{{coupons.couponDes}}</p>
+                <p><strong>{{coupons?.stores}}   |  {{coupons?.couponTag}}</strong></p>
+                <p>{{coupons?.couponDes}}</p>
                 <div class="code">
                     <small class="extra">Use this coupon code</small>
                     <br>
-                    <p class="c-code col-lg-7 mt-3 mr-4">{{coupons.couponCode}}</p>
+                    <p class="c-code col-lg-7 mt-3 mr-4">{{coupons?.couponCode}}</p>
                     <button class="btn btn-success copycode" data-toggle="modal" data-target="#codeCopy">Copy
                         Code</button>
                 </div>

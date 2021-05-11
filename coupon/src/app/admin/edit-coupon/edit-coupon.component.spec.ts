@@ -1,6 +1,11 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { HttpClientTestingModule} from '@angular/common/http/testing';
 import { EditCouponComponent } from './edit-coupon.component';
+import { BrandService } from 'src/app/brand.service';
+import {RouterModule } from '@angular/router';
+import { ReactiveFormsModule } from '@angular/forms';
+import { RouterTestingModule } from '@angular/router/testing';
+import { HttpClientModule } from '@angular/common/http';
 
 describe('EditCouponComponent', () => {
   let component: EditCouponComponent;
@@ -8,7 +13,9 @@ describe('EditCouponComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ EditCouponComponent ]
+      imports :[HttpClientTestingModule, HttpClientModule,RouterTestingModule,ReactiveFormsModule],
+      declarations: [ EditCouponComponent ],
+      providers : [BrandService]
     })
     .compileComponents();
   });

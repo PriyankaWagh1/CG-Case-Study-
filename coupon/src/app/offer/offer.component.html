@@ -21,12 +21,12 @@
         <div class="col-lg-3"></div>
         <div class="card col-lg-6">
             <div class="coupon">
-                <p><strong>{{offers.tag}}</strong></p>
-                <p>{{offers.desc}}</p>
+                <p><strong>{{offers?.stores}} | {{offers?.tag}}</strong></p>
+                <p>{{offers?.desc}}</p>
                 <div class="code">
                     <small class="extra">No code required. Carry on shopping as usual</small>
                     <br>
-                    <p class="c-code col-lg-9 mt-3 mr-4">{{offers.status}}</p>
+                    <p class="c-code col-lg-9 mt-3 mr-4">{{offers?.status}}</p>
                     
             </div>
         </div>

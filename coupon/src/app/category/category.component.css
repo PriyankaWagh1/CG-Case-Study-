@@ -130,3 +130,6 @@
     background-color: dodgerblue;
     border: 4px double white;
 }
+input[type='search']{
+    width: 300px;
+}
