@@ -13,6 +13,7 @@ export class AddOfferComponent implements OnInit {
   id:any;
   offers:any;
   newOfferForm : any;
+
   constructor(private brandService: BrandService,
     private activatedRoute: ActivatedRoute,
     private router: Router) { }
@@ -34,21 +35,24 @@ export class AddOfferComponent implements OnInit {
     })
     
   }
+  //Add new offer
   submitOffer(form:any){
     this.brandService.addOffer(form.value).subscribe(data=>{
       console.log("Successfully Added");
-      this.router.navigate(['/admin/add-offer']);
+     this.ngOnInit();
     },
     (err)=>{
       console.log(err);
     })
   }
-  delete(id: any){
-    this.brandService.deleteOffer(id).subscribe(data=>{
+  //delete offer
+  delete(offer: any){
+    this.brandService.deleteOffer(offer._id).subscribe(data=>{
       console.log('Deleted!');
-      this.router.navigate(['/admin/add-offer']);
+      this.ngOnInit();
     },err=>{
       console.log(err);
     });
   }
+  
 }

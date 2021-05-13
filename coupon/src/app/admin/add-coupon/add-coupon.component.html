@@ -1,7 +1,9 @@
 <div class="container">
   <div class="row mt-3">
+    <!-- Adding of coupon -->
     <a role="button" data-toggle="modal" class="btn btn-primary m-3" data-target="#addCoupon"><i
         class="fa fa-plus mr-2"></i>Add Coupon</a>
+    <!-- Display coupons from database -->
     <table id="example" class="table table-striped table-bordered" style="width:100%">
       <thead>
         <tr>
@@ -27,14 +29,36 @@
           <td>
             <a routerLink="/admin/edit-coupon/{{coupon._id}}" role="button" class="btn btn-success mr-2"
               data-toggle="modal"><i class="fa fa-edit"></i></a>
-            <a role="button" class="btn btn-danger" (click)="delete(coupon._id)" data-toggle="modal" data-target="#deleteConfirm"><i
+            <a role="button" class="btn btn-danger" data-toggle="modal" data-target="#deleteConfirm"><i
                 class="fa fa-trash"></i></a>
           </td>
         </tr>
-      </tbody>
+        
+      </tbody>      
     </table>
+    <div id="deleteConfirm" class="modal fade" *ngFor="let coupon of coupons">
+      <div class="modal-dialog modal-login">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">Are You Sure You Want to Logout?</h4>
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+              &times;
+            </button>
+          </div>
+          <div class="modal-body">
+            <button type="button" class="btn btn-danger mr-2" data-dismiss="modal" (click)="delete(coupon)">
+              Yes
+            </button>
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">
+              No
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Delete end -->
   </div>
-
+  <!-- Form for adding of coupon -->
   <div class="modal fade" role="dialog" tabindex="-1" id="addCoupon">
     <div class="modal-dialog modal-lg" role="document">
       <div class="modal-content">
@@ -108,19 +132,3 @@
   </div>  
 </div>
 
-<div class="modal fade" id="deleteConfirm" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Are you sure you want to delete?</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-success" data-dismiss="modal" >Yes</button>
-        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
-      </div>
-    </div>
-  </div>
-</div>

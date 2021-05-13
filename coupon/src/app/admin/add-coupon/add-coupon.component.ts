@@ -33,21 +33,24 @@ export class AddCouponComponent implements OnInit {
     });
     
   }
+  //add new coupon  
   submitCoupon(form:any){
     this.brandService.addCoupon(form.value).subscribe(data=>{
       console.log("Successfully Added");
-      this.router.navigate(['/admin/add-coupon']);
+      this.ngOnInit();
     },
     (err)=>{
       console.log(err);
     })
   }
-  delete(id: any){
-    this.brandService.deleteCoupon(id).subscribe(data=>{
+  //deletion of coupon
+  delete(coupon:any){
+    this.brandService.deleteCoupon(coupon._id).subscribe(data=>{
       console.log('Deleted!');
-      this.router.navigate(['/admin/add-coupon']);
+      this.ngOnInit();
     },err=>{
       console.log(err);
     });
   }
+  
 }

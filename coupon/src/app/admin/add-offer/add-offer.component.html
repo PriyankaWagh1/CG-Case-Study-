@@ -37,6 +37,28 @@
                 </tr>
             </tbody>
         </table>
+
+        <div id="deleteConfirm" class="modal fade" *ngFor="let offer of offers">
+            <div class="modal-dialog modal-login">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h4 class="modal-title">Are You Sure You Want to Logout?</h4>
+                  <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                    &times;
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <button type="button" class="btn btn-danger mr-2" data-dismiss="modal" (click)="delete(offer)">
+                    Yes
+                  </button>
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">
+                    No
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Delete end -->
     </div>
 
     <div class="modal fade" role="dialog" tabindex="-1" id="addOffer">
@@ -132,19 +154,3 @@
     </div>
 </div>
 
-<div class="modal fade" id="deleteConfirm" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Are you sure you want to delete?</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-success" data-dismiss="modal" >Yes</button>
-        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
-      </div>
-    </div>
-  </div>
-</div>

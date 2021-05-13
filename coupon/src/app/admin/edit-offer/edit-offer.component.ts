@@ -28,15 +28,17 @@ export class EditOfferComponent implements OnInit {
       date: new FormControl('', Validators.required),
       status: new FormControl('', Validators.required)
     });
-  
+  //to fetch values of offer by id
   this.activatedRoute.params.subscribe(data=>{
     this.id = data.id;
     })
+    //for prefilling information in form
     this.brandService.getOfferById(this.id).subscribe(data=>{
       this.offers=data;
       this.newOfferForm.patchValue(this.offers);
     })
   }
+  //update and send updated values to database
   updateOffer(form:any){
     this.brandService.updateOffer(this.id,this.newOfferForm.value).subscribe((data:any)=>{
       console.log("Updated");

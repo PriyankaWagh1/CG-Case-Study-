@@ -84,7 +84,8 @@ input[type='email']{
     padding: 0.5rem;
 }
 .list-group{
-    background-image: linear-gradient(blue,dodgerblue,lightblue);
+    background-image: linear-gradient(grey,lightgrey);
+    padding: 0.5rem;
 }
 .list-group-item{
     padding: 1rem;

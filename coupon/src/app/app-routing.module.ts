@@ -34,7 +34,7 @@ const routes: Routes = [
     ],canActivate:[AuthGuardService]},
     {path:'offer', redirectTo:'login', pathMatch:"full"},
     {path:'coupon', redirectTo:'login', pathMatch:"full"},
-    {path:'admin', redirectTo:'login', pathMatch:"full"},
+    {path:'admin', redirectTo:'home', pathMatch:"full"},
     { path: '**', component: PageNotFoundComponent }
 ];
 

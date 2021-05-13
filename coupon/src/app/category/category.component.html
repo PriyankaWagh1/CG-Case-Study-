@@ -6,16 +6,8 @@
     <div class="cat-heading mt-3">
         <h2 class="text-center">Categories</h2>
     </div>
-   <div class="row">
-       <div class="col-lg-4 "></div>
-    <form class="col-lg-7 mr-4 ">
-        <div class="form-inline text-center">
-          <input class="form-control mr-sm-2" type="search" placeholder="Search" formControlName="query" aria-label="Search">
-          <button class="btn btn-success my-2 my" type="submit">Search</button>
-        </div>
-
-      </form>
-   </div>
+   
+   <!-- display categories -->
     <div class="row">
         <div class="col-lg-1 col-sm-2 mx-5 mt-sm-2" *ngFor="let value of values ">
             <div class="v-card" >
@@ -26,7 +18,7 @@
         </div>
     </div>
     <br>
-    
+    <!-- Tabs to display offers and coupons -->
             <ul class="nav nav-tabs nav-justified">
                 <li class="active"><a data-toggle="tab" href="#offers">Offers</a></li>
                 <li><a data-toggle="tab" href="#coupons">Coupons</a></li>
@@ -62,6 +54,7 @@
                 </div>
             </div>    
 </div>
+<!-- Popup if not logged in -->
 <div id="popup" class="modal fade">
     <div class="modal-dialog modal-login">
       <div class="modal-content">

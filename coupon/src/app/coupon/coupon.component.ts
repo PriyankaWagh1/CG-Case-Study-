@@ -23,12 +23,13 @@ export class CouponComponent implements OnInit {
     this.activatedRoute.params.subscribe(data=>{
       this.id = data.id;
     })
-    
+    //display coupon by id
     this.brandService.getCouponById(this.id).subscribe(data=>{
       this.coupons=data;
     })
     
   }
+  //dummy payment gateway
   options = {
     "key": "rzp_test_mqpELmqmeEONgE",
     "amount": "50000",
@@ -38,13 +39,12 @@ export class CouponComponent implements OnInit {
     "image": "https://cdn.razorpay.com/logos/F9Yhfb7ZXjXmIQ_medium.png",
     "handler": function (response:any) { 
         alert(response.razorpay_payment_id);
-        alert(response.razorpay_order_id);
-        alert(response.razorpay_signature)
+       
     },
     "prefill": {
-        "name": "Gaurav Kumar",
-        "email": "gaurav.kumar@example.com",
-        "contact": "9545898974"
+        "name": "",
+        "email": "",
+        "contact": ""
     },
     "notes": {
         "address": "Razorpay Corporate Office"

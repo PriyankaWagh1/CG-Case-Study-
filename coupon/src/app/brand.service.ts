@@ -43,8 +43,8 @@ export class BrandService {
   updateCoupon(id:any, body:any){
     return this.http.put(this.apiBaseUrl + '/updateCoupon/'+ id, body);
   }
-  deleteCoupon(id:any){
-    return this.http.delete(this.apiBaseUrl+'/deleteCoupon/'+id);
+  deleteCoupon(_id:any){
+    return this.http.delete(this.apiBaseUrl+'/deleteCoupon/'+_id);
   }
   addOffer(body:any){
     return this.http.post(this.apiBaseUrl+'/addOffer', body);

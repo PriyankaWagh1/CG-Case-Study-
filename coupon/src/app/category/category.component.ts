@@ -27,6 +27,7 @@ export class CategoryComponent implements OnInit {
     ) { }
 
   ngOnInit(): void {
+    //coupons
     this.brandService.getAllCoupons().subscribe(data=>{
       this.couponDetails = data;
       console.log(data);
@@ -38,12 +39,13 @@ export class CategoryComponent implements OnInit {
         this.count[el] = this.count[el] + 1 || 1;
 
       });
+      //store different categories in values
       this.keys = Object.keys(this.count);
       this.values = this.keys.splice(',');
       
     });
 
-    //offers
+    //offers and store categories and display them in browser
     this.brandService.getAllOffers().subscribe(data=>{
       this.offerDetails = data;
       console.log(data);
@@ -55,6 +57,7 @@ export class CategoryComponent implements OnInit {
         this.count[el] = this.count[el] + 1 || 1;
 
       });
+      //store different categories in values
       this.keys = Object.keys(this.count);
       this.values = this.keys.splice(',');
       
@@ -65,6 +68,7 @@ export class CategoryComponent implements OnInit {
     
         
   }
+  //to show coupon code
   showCode(id: any){
     if(this.loginService.checkTokenExist()){
         this.router.navigate(['/coupon/'+id]);
@@ -73,6 +77,7 @@ export class CategoryComponent implements OnInit {
       console.log('Login');
     }
   }
+  //to show offer
   showOffer(id: any){
     if(this.loginService.checkTokenExist()){
             this.router.navigate(['/offer/'+id]);     

@@ -24,6 +24,7 @@ import { AddOfferComponent } from './admin/add-offer/add-offer.component';
 import { EditOfferComponent } from './admin/edit-offer/edit-offer.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -43,6 +44,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     AddOfferComponent,
     EditOfferComponent,
     PageNotFoundComponent,
+    
    
    
   ],

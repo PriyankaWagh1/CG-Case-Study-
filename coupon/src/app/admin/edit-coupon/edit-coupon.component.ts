@@ -27,14 +27,17 @@ export class EditCouponComponent implements OnInit {
       stores: new FormControl('', Validators.required),
       
     });
+     //to fetch values of coupon by id
     this.activatedRoute.params.subscribe(data=>{
     this.id = data.id;
     })
+    //for prefilling information in form
     this.brandService.getCouponById(this.id).subscribe(data=>{
       this.coupons=data;
       this.newCouponForm.patchValue(this.coupons);
     })
   }
+  //update and send updated values to database
   updateCoupon(form:any){
     this.brandService.updateCoupon(this.id,this.newCouponForm.value).subscribe((data:any)=>{
       console.log("Updated");

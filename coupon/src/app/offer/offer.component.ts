@@ -23,6 +23,7 @@ export class OfferComponent implements OnInit {
     this.activatedRoute.params.subscribe(data=>{
       this.id = data.id;
     })
+    //display offer for particular id
     this.brandService.getCouponById(this.id).subscribe(data=>{
       this.coupons=data;
     });
